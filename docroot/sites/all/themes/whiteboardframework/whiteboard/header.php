@@ -110,11 +110,6 @@
                         <div id="header-logo">
                             <a href="/"><div style="width:280px;height:200px;position:absolute;margin-top:30px;margin-left:20px;"></div></a>
                             <a href="/about"><div style="width:150px;height:30px;position:absolute;margin-top:180px;margin-left:320px;"></div></a>
-                            <?php //if(!$user->uid) {?>
-                                <div id="register-button"><a href="/user/register"><img src="/<?php print path_to_theme(); ?>/images/drupalcamp-register.png" border="0"></a></div>
-                            <?php //} else {?>
-                                <!--<div id="register-button"><a href="/program/session-schedule/your-schedule"><img src="/<?php print path_to_theme(); ?>/images/btn_schedule.png" border="0"></a></div>-->
-                            <?php //} ?>
                         </div>
                         <?php 
                             if(drupal_is_front_page())
