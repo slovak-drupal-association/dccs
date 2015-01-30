@@ -1,0 +1,38 @@
+name = Whiteboard
+description = Drupal Camp theme built adaptively on Whiteboard Framework for WordPress.
+version = 6.x-1.0
+core = 6.x
+engine = phptemplate
+author = Exove
+
+; Styles grouped into separate files, based on their context.
+stylesheets[all][] = css/lessframework.css
+stylesheets[all][] = css/theme.css
+stylesheets[all][] = css/style.css
+stylesheets[all][] = js/flexslider/flexslider.css
+
+scripts[] = js/flexslider/jquery.flexslider.js
+
+features[] = logo
+features[] = name
+features[] = slogan
+features[] = mission
+features[] = node_user_picture
+features[] = comment_user_picture
+features[] = favicon
+regions[right] = Right sidebar
+regions[content] = Content
+regions[header_search] = Header Search
+regions[speakers_slider] = Speakers
+regions[footer] = Footer
+regions[footer_menu] = Footer Menu
+regions[front_content] = Front Content
+regions[sponsor_sidebar] = Sponsors sidebar
+regions[twitter_widget] = Twitter widget
+
+; Information added by drupal.org packaging script on 2011-12-16
+; version = "6.x-1.0"
+; core = "6.x"
+; project = "whiteboardframework"
+; datestamp = "1324015549"
+

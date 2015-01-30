@@ -1,0 +1,10 @@
+CHANGELOG for Empty Page for Drupal 6
+Empty Page 1.1
+  Bug fixes:
+    - #922404 by peach: Title not working unless cache is cleared
+  Tasks:
+    - #923516 by ressa: Empty Settings and example in README.txt
+    - Updated Package name in info file
+    - Added more function block comments
+    - Removed commented debug calls
+    - Made callback Internal Path form element appear as required
