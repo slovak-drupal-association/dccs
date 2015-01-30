@@ -1,0 +1,13 @@
+name = Simplenews test
+description = Simplenews helper module for test framework. Do not use in a production environment!
+dependencies[] = simplenews
+package = Testing
+hidden = TRUE
+core = 6.x
+
+; Information added by drupal.org packaging script on 2012-01-07
+version = "6.x-2.0-alpha3"
+core = "6.x"
+project = "simplenews"
+datestamp = "1325946042"
+
