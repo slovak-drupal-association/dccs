@@ -82,7 +82,7 @@ DirectoryIndex index.php
   # If incomming is *.drupalcamp.sk except www, redirect to folder subdomains/*
   RewriteCond %{HTTP_HOST} !^www\.
   RewriteCond %{HTTP_HOST} ^2013\.drupalcamp\.sk
-  RewriteRule ^(.*)$ http://drupalcamp.sk/subdomains/2013/index.php?q=$1 [L, NC]
+  RewriteRule ^(.*)$ http://drupalcamp.sk/subdomains/2013/index.php?q=$1 [L]
 
 
   # If your site can be accessed both with and without the 'www.' prefix, you
