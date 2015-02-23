@@ -1,0 +1,75 @@
+<?php
+
+/**
+ *
+ * @file
+ * Installation file.
+ *
+ */
+
+/**
+ * Implementation of hook_install().
+ */
+function empty_page_install() {
+  drupal_install_schema('empty_page');
+}
+
+/**
+ * Implementation of hook_uninstall().
+ */
+function empty_page_uninstall() {
+  drupal_uninstall_schema('empty_page');
+  empty_page_clear_menu_cache();
+}
+
+/**
+ * Implementation of hook_schema().
+ */
+function empty_page_schema() {
+  $schema['empty_page'] = array(
+    'description' => 'The base table for empty_page callbacks.',
+    'fields' => array(
+      'cid' => array(
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ),
+      'path' => array(
+        'type' => 'varchar',
+        'length' => 128,
+        'not null' => TRUE,
+        'default' => '',
+      ),
+      'page_title' => array(
+        'type' => 'varchar',
+        'length' => 128,
+        'not null' => TRUE,
+        'default' => '',
+      ),
+      'data' => array(
+        'type' => 'text',
+        'not null' => FALSE,
+        'size' => 'big',
+      ),
+      'changed' => array(
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+      'created' => array(
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+    ),
+    'indexes' => array(
+      'changed' => array('changed'),
+    ),
+    'unique keys' => array(
+      'cid' => array('cid')
+    ),
+    'primary key' => array('cid'),
+  );
+  
+  return $schema;
+}
