@@ -1,0 +1,83 @@
+/**
+ * @file
+ * Miscleaneous.
+ */
+
+.deco-group {
+  position: absolute;
+  z-index: 1;
+  .deco {
+    @include border-radius(25px);
+    background: #84c5f0;
+    height: 45px;
+    position: relative;
+    width: 296px;
+  }
+  .deco + .deco {
+    left: 65px;
+  }
+  .deco + .deco + .deco {
+    left: -45px;
+  }
+  &.deco-group-1 {
+    left: -10px;
+    top: 45px;
+  }
+  &.deco-group-2 {
+    right: -90px;
+    top: 265px;
+  }
+  &.deco-group-3 {
+    left: -185px;
+    top: 60px;
+    .deco {
+      background: #d3eeff;
+    }
+  }
+  &.deco-group-4 {
+    margin-right: -35px;
+    right: 50%;
+    top: -70px;
+    .deco {
+      background: #d9f1fd;
+    }
+  }
+  &.deco-group-5 {
+    bottom: 0;
+    right: 120px;
+    top: auto;
+    .deco {
+      background: #d9f1fd;
+    }
+  }
+}
+
+/* Mailchimp form */
+#mc_embed_signup {
+  background: none !important;
+  font: inherit !important;
+  #mc_embed_signup_scroll > h2,
+  .indicates-required {
+    display: none;
+  }
+  .mc-field-group {
+    label {
+      display: block;
+      font-weight: bold;
+      margin: 0.5em 0;
+    }
+    input {
+      @include border-radius(5px);
+      border: 0 none;
+      color: #afafaf;
+      font-size: 16px;
+      font-style: italic;
+      padding: 15px;
+      width: 100%;
+    }
+  }
+  input.button {
+    border: 0 none;
+    margin: 1.5em 0;
+  }
+}

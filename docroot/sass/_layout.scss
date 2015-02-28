@@ -1,0 +1,58 @@
+* {
+  @include box-sizing(border-box);
+}
+
+$susy: (
+  columns: 4,
+  gutters: 1/4,
+  math: fluid,
+  output: float,
+  gutter-position: split,
+  // debug: (image: show),
+  use-custom: (
+    box-sizing: false,
+  ),
+);
+
+// Susy layouts
+$desktop-layout: layout(auto 12 1/1 split);
+
+// Susy Breakpoints
+$desktop-breakpoint: 960px;
+
+/**
+ * Mobile first
+ */
+.inner {
+  @include container();
+  position: relative;
+  z-index: 2;
+}
+
+.section {
+  overflow: hidden;
+  position: relative;
+}
+
+.header--inner,
+.follow-us--inner,
+.made-by--inner {
+  @include span(4);
+}
+
+/**
+ * Media queries
+ */
+
+/* Desktop */
+@include susy-breakpoint($desktop-breakpoint, $desktop-layout) {
+  .inner {
+    @include container(1180px);
+    @include show-grid(12);
+  }
+  .header--inner,
+  .follow-us--inner,
+  .made-by--inner {
+    @include span(12);
+  }
+}

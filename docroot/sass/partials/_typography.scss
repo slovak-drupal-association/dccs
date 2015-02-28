@@ -1,0 +1,16 @@
+/**
+ * @file
+ * Typography.
+ */
+
+body {
+  color: $color-text;
+  font-family: $montserrat;
+  font-size: 100%;
+  line-height: 1.2;
+}
+
+p {
+  line-height: 2em;
+  margin: 0 0 2em;
+}

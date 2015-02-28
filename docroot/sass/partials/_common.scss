@@ -1,0 +1,14 @@
+/**
+ * @file
+ * Common reusable classes and placeholders.
+ */
+
+.highlighted {
+  color: $color-highlight;
+}
+
+%hide-text {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}

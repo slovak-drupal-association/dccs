@@ -1,0 +1,12 @@
+/**
+ * @file
+ * Generic html elements, such as links, lists, etc.
+ */
+
+a:link,
+a:visited {
+  color: $color-link;
+  &:hover {
+    text-decoration: none;
+  }
+}
