@@ -670,12 +670,3 @@ $databases['default']['default'] = array (
 $settings['install_profile'] = 'standard';
 $config_directories['active'] = 'sites/dccs-2015.dd/files/config_HjmJwXOmRsV4mMJ8BBnYgXDBo7W3AZxcAGZmHg77XcAxRod4pYPWxdUJd3jfZkGuoHayqgIIwg/active';
 $config_directories['staging'] = 'sites/dccs-2015.dd/files/config_HjmJwXOmRsV4mMJ8BBnYgXDBo7W3AZxcAGZmHg77XcAxRod4pYPWxdUJd3jfZkGuoHayqgIIwg/staging';
-
-
-// On Acquia Cloud, this include file configures Drupal to use the correct
-// database in each site environment (Dev, Stage, or Prod). To use this
-// settings.php for development on your local workstation, set $db_url
-// (Drupal 5 or 6) or $databases (Drupal 7 or 8) as described in comments above.
-if (file_exists('/var/www/site-php')) {
-  require('/var/www/site-php/drupalcampslovakia/drupalcampslovakia-settings.inc');
-}
