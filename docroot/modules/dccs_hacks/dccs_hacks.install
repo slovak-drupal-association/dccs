@@ -1,0 +1,11 @@
+<?php
+function dccs_hacks_install() {
+    // This module is designed to be enabled on a brand new instance of
+    // Drupal. Settings its uuid here will tell this instance that it is
+    // in fact the same site as any other instance. Therefore, all local
+    // instances, continuous integration, testing, dev, and production
+    // instances of a codebase will have the same uuid, enabling us to
+    // sync these instances via the config management system.
+    // See also https://www.drupal.org/node/2133325
+    dccs_hacks_set_uuid('c06daf44-4737-45e3-b609-9d69b9fb8abb');
+}

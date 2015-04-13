@@ -1,0 +1,42 @@
+<?php
+/**
+* @file
+* site deployment functions
+*/
+use Drupal\Core\Extension\InfoParser;
+
+/**
+* Updates dependencies based on the site deployment's info file.
+*
+* If during the course of development, you add a dependency to your
+* site deployment module's .info file, increment the update hook
+* (see the .install module) and this function will be called, making
+* sure dependencies are enabled.
+*/
+function dccs_hacks_deploy_update_dependencies() {
+$parser = new InfoParser;
+$info_file = $parser->parse(drupal_get_path('module', 'dccs_hacks') . '/dccs_hacks.info.yml');
+if (isset($info_file['dependencies'])) {
+\Drupal::moduleHandler()->install($info_file['dependencies'], TRUE);
+// Might also be
+// \Drupal::service('module_installer')->install($info_file['dependencies'], TRUE);
+// See comments section
+}
+}
+
+/**
+* Set the UUID of this website.
+*
+* By default, reinstalling a site will assign it a new random UUID, making
+* it impossible to sync configuration with other instances. This function
+* is called by site deployment module's .install hook.
+*
+* @param $uuid
+*   A uuid string, for example 'e732b460-add4-47a7-8c00-e4dedbb42900'.
+*/
+function dccs_hacks_set_uuid($uuid) {
+\Drupal::configFactory() ->getEditable('system.site') // After Jan. 16th, 2015, see [Nathanael's comment](http://dcycleproject.org/comment/2603#comment-2603)
+// \Drupal::config('system.site') // Before Jan. 16th, 2015
+->set('uuid', $uuid)
+->save();
+}
