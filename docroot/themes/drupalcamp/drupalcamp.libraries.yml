@@ -47,7 +47,8 @@ global-styling:
       css/print.css: { media: print }
       unsemantic/stylesheets/unsemantic-grid-responsive.css: {}
       css/drupalcamp.css: {}
-
+  js:
+    js/drupalcamp.js: {}
 color.preview:
   version: VERSION
   css:
