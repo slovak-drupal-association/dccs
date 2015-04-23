@@ -6,4 +6,12 @@
     }
   };
 
+  Drupal.behaviors.menuToggleDC = {
+    attach: function (context, settings) {
+				$( '.menu-toggle' ).click(function() {
+					$( '#block-drupalcamp-main-menu' ).find( 'ul.menu' ).toggleClass( 'open' );
+				});
+    }
+  };
+
 })(jQuery, Drupal);

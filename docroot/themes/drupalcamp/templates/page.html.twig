@@ -88,13 +88,13 @@
       </div>
       {# decoration end #}
       <div class="section layout-container clearfix">
-	{{ page.primary_menu }}
-        {{ page.secondary_menu }}
         {% if logo %}
           <a href="{{ front_page }}" title="{{ 'Home'|t }}" rel="home" id="logo">
-            DrupalCamp<span class="highlighted">CS</span>
+            DRUPALCAMP<span class="highlighted">CS</span>
           </a>
         {% endif %}
+	{{ page.primary_menu }}
+        {{ page.secondary_menu }}
 	{{ page.header }}
         {% if site_name or site_slogan %}
           <div id="name-and-slogan"{% if hide_site_name and hide_site_slogan %} class="visually-hidden"{% endif %}>
@@ -131,6 +131,13 @@
     {% endif %}
     {% if page.highlighted_top %}
       <div class="highlighted-top">
+	{# decoration start #}
+	  <div class="deco-group deco-group-2">
+	      <div class="deco"></div>
+	      <div class="deco"></div>
+	      <div class="deco"></div>
+	  </div>
+	{# decoration end #}
         <aside class="highlighted-top__inner section layout-container clearfix" role="complementary">
           {{ page.highlighted_top }}
         </aside>
@@ -193,6 +200,7 @@
 	</aside>
       </div>
     {% endif %}
+    {% if page.footer_first or page.footer_second or page.footer_third or page.footer_fourth %}
     <div id="site-footer__wrapper">
       {# decoration start #}
 	  <div class="deco-group deco-group-1">
@@ -211,6 +219,7 @@
 	  #}
           </div>
         {% endif %}
+	{% endif %}
       </footer>
     </div>
       {% if page.footer_fifth %}
