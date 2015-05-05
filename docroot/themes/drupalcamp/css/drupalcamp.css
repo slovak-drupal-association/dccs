@@ -433,7 +433,7 @@ input[type="submit"]:hover,
 }
 .deco-group.deco-group-2 {
   right: -90px;
-  top: 265px;
+  top: 205px;
 }
 .deco-group.deco-group-3 {
   left: -185px;
@@ -511,7 +511,7 @@ input[type="submit"]:hover,
 }
 
 .view-id-speakers .views-row {
-  height: 139px;
+  height: 169px;
 }
 
 .view-individual-sponsors .views-row {
@@ -720,12 +720,13 @@ ul.menu a.active {
 }
 
 .view-id-speakers_view .views-row {
-  height: 139px;
+  height: 169px;
   overflow: hidden;
   margin-bottom: 40px;
   float: left;
   width: 48%;
   padding-right: 2%;
+  text-align: justify;
 }
 
 .view-id-speakers_view .field-user--user-picture {
