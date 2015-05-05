@@ -1,0 +1,5 @@
+name: Eventbrite
+type: module
+description: 'Integration with Eventbrite event platform on attendees level'
+package: 'Custom'
+core: 8.x
