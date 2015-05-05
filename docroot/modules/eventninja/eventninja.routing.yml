@@ -1,0 +1,7 @@
+eventninja.admin_form:
+  path: '/admin/config/services/eventninja'
+  defaults:
+    _form: '\Drupal\eventninja\Form\AdminForm'
+    _title: 'Eventninja'
+  requirements:
+    _permission: 'administer site configuration'

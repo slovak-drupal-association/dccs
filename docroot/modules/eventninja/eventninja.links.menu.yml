@@ -1,0 +1,5 @@
+eventninja.admin_form:
+  title: 'Eventninja'
+  parent: system.admin_config_services
+  description: 'Import new attendees'
+  route_name: eventninja.admin_form

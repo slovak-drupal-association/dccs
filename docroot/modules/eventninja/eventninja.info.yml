@@ -1,0 +1,5 @@
+name: Eventninja
+type: module
+description: 'Integration with data-driven event platform'
+package: 'Custom'
+core: 8.x

@@ -1,0 +1,63 @@
+<?php
+
+use Drupal\eventbrite\Eventbrite;
+
+/**
+ * Implements hook_cron().
+ */
+function eventbrite_cron() {
+  // load configuration
+  $config = \Drupal::configFactory()->get('custom.Eventbrite');
+  $eventId = $config->get('eventId');
+  $userKey = $config->get('userKey');
+  $appKey = $config->get('appKey');
+  $lastAccessTime = $config->get('lastAccessTime');
+
+  if (!empty($eventId) && !empty($userKey) && !empty($appKey)) { // if there is configuration
+    // Try to create instance of Eventbrite class
+    try {
+      $eventbrite = new Eventbrite([
+        'app_key' => $appKey,
+        'user_key' => $userKey
+      ]);
+    } catch (\Exception $e) {
+      exit;
+    }
+
+    // Create requst data.
+    $requestData = [
+      'id' => $eventId,
+      'status' => 'attending',
+    ];
+
+    if (!is_null($lastAccessTime)) {
+      $requestData['changed_since'] = $lastAccessTime;
+    }
+
+    // Try load attendees through dynamic function.
+    try {
+      $attendees = $eventbrite->event_list_attendees($requestData);
+    } catch (\Exception $e) {
+      $attendees = [];
+    }
+
+    setLastAccessTime();
+
+    // Create queue.
+    $queue = \Drupal::queue('eventbrite');
+
+    foreach ($attendees->attendees as $a) { // Add each attendee into queue to be processed.
+      $queue->createItem($a);
+    }
+  }
+
+}
+
+/**
+ * Helper function for storing lastAccessTime value
+ */
+function setLastAccessTime() {
+  \Drupal::configFactory()->getEditable('custom.Eventbrite')
+    ->set('lastAccessTime', date('c'))
+    ->save();
+}

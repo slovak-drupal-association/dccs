@@ -1,0 +1,7 @@
+eventbrite.admin_form:
+  path: '/admin/config/services/eventbrite'
+  defaults:
+    _form: '\Drupal\eventbrite\Form\ConfigForm'
+    _title: 'Eventbrite'
+  requirements:
+    _permission: 'administer site configuration'
