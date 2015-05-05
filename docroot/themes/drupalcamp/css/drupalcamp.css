@@ -761,27 +761,30 @@ ul.menu a.active {
   margin: 0px;
 }
 
-.view-id-attendees .views-row:nth-child(odd) {
-  height: 91px;
+.view-id-attendees .views-row {
+  height: 120px;
   overflow: hidden;
   margin-bottom: 10px;
   float: left;
-  width: 48%;
-  padding-right: 2%;
+  width: 22%;
+}
+
+@media all and (max-width: 1024px) {
+    .view-id-attendees .views-row {
+        height: 120px;
+        overflow: hidden;
+        margin-bottom: 10px;
+        float: left;
+        width: 48%;
+    }
+}
+
+.view-id-attendees .views-row:nth-child(odd) {
+    padding-right: 2%;
 }
 
 .view-id-attendees .views-row:nth-child(even) {
-  height: 91px;
-  overflow: hidden;
-  margin-bottom: 10px;
-  float: left;
-  width: 48%;
   padding-left: 2%;
-}
-
-.view-id-attendees .views-field-user-picture {
-  float: left;
-  padding: 0px 20px 0px 0px;
 }
 
 .view-id-attendees .views-field-name {

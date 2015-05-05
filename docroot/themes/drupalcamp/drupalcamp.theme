@@ -35,6 +35,8 @@ function drupalcamp_preprocess_html(&$variables) {
     $variables['attributes']['class'][] = 'has-featured-top';
   }
 
+  $variables['meta_image'] = $GLOBALS ['base_url'] . '/' .drupal_get_path('theme','drupalcamp').'/images/fb_image.png';
+
 }
 
 /**
