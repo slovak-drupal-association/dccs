@@ -238,6 +238,37 @@ input[type="submit"]:hover,
   border-bottom-style: none;
 }
 
+.node-readmore a {
+  color: #FFF;
+  text-transform: uppercase;
+  padding: 10px 10px 10px 10px;
+  background-color: #efb257;
+  -webkit-transition: background-color 200ms ease-out;
+  -moz-transition: background-color 200ms ease-out;
+  -o-transition: background-color 200ms ease-out;
+  transition: background-color 200ms ease-out;
+  display: inline-block;
+  text-decoration: none;
+  text-shadow: none;
+  border-radius: 5px;
+  text-align: center;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1em;
+}
+
+.node-readmore a:hover {
+  background-color: #dfa44b;
+  box-shadow: 1px 0px 1px 1px #DDD;
+  -webkit-transition: background-color 200ms ease-out;
+  -moz-transition: background-color 200ms ease-out;
+  -o-transition: background-color 200ms ease-out;
+  transition: background-color 200ms ease-out;
+  color: #FFF;
+  border-bottom-style: none;
+  text-decoration: none;
+}
+
 /* Titles */
 
 #site-footer__bottom .block {
@@ -257,7 +288,7 @@ input[type="submit"]:hover,
   background-color: #efb257;
   height: 3px;
   position: relative;
-  bottom: 7px;
+  bottom: 6px;
 }
 
 #site-footer__wrapper h2 {
@@ -275,7 +306,7 @@ input[type="submit"]:hover,
   background-color: #efb257;
   height: 3px;
   position: relative;
-  bottom: 7px;
+  bottom: 6px;
 }
 
 
@@ -296,7 +327,7 @@ input[type="submit"]:hover,
   background-color: #efb257;
   height: 3px;
   position: relative;
-  bottom: 7px;
+  bottom: 6px;
 }
 
 .featured-top .block {
@@ -343,7 +374,7 @@ input[type="submit"]:hover,
   background-color: #efb257;
   height: 3px;
   position: relative;
-  bottom: 7px;
+  bottom: 6px;
 }
 
 .highlighted {
@@ -373,7 +404,7 @@ input[type="submit"]:hover,
   background-color: #efb257;
   height: 3px;
   position: relative;
-  bottom: 7px;
+  bottom: 6px;
 }
 
 /* decration */
@@ -402,7 +433,7 @@ input[type="submit"]:hover,
 }
 .deco-group.deco-group-2 {
   right: -90px;
-  top: 265px;
+  top: 205px;
 }
 .deco-group.deco-group-3 {
   left: -185px;
@@ -480,7 +511,7 @@ input[type="submit"]:hover,
 }
 
 .view-id-speakers .views-row {
-  height: 139px;
+  height: 169px;
 }
 
 .view-individual-sponsors .views-row {
@@ -689,12 +720,13 @@ ul.menu a.active {
 }
 
 .view-id-speakers_view .views-row {
-  height: 139px;
+  height: 169px;
   overflow: hidden;
   margin-bottom: 40px;
   float: left;
   width: 48%;
   padding-right: 2%;
+  text-align: justify;
 }
 
 .view-id-speakers_view .field-user--user-picture {
