@@ -720,7 +720,7 @@ ul.menu a.active {
 }
 
 .view-id-speakers_view .views-row {
-  height: 169px;
+  height: 190px;
   overflow: hidden;
   margin-bottom: 40px;
   float: left;
@@ -743,6 +743,9 @@ ul.menu a.active {
 .view-id-speakers_view .field-user--field-last-name {
   display: inline-block;
   font-size: 16px;
+}
+.views-field-field-referenced-user .field-name-field-about-me {
+	padding-left: 105px;
 }
 
 .path-speakers .main-content .section {
@@ -996,6 +999,11 @@ ul.menu a.active {
 
 #mc_embed_signup {
   background: none !important;
+}
+
+/* component content */
+.node--view-mode-teaser {
+	border-bottom: 0 none;
 }
 
 /**** END FORM BLOCK ****/
