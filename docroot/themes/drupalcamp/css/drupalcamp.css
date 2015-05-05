@@ -769,6 +769,16 @@ ul.menu a.active {
   width: 22%;
 }
 
+@media all and (max-width: 1024px) {
+    .view-id-attendees .views-row {
+        height: 120px;
+        overflow: hidden;
+        margin-bottom: 10px;
+        float: left;
+        width: 48%;
+    }
+}
+
 .view-id-attendees .views-row:nth-child(odd) {
     padding-right: 2%;
 }
