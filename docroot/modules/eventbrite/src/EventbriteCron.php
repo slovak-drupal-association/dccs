@@ -1,7 +1,6 @@
 <?php
-namespace Drupal\dccs_hacks;
+namespace Drupal\eventbrite;
 
-use Drupal\Core\Logger\RfcLogLevel;
 use Drupal\user\Entity\User;
 
 class EventbriteCron {
@@ -39,32 +38,7 @@ class EventbriteCron {
     $this->setLastAccessTime();
 
     foreach ($attendees->attendees as $a) {
-      try {
-        $user_data = [
-          'mail' => $a->attendee->email,
-          'name' => $a->attendee->email,
-          'status' => 1,
-          'field_first_name' => ['value' => $a->attendee->first_name],
-          'field_last_name' => ['value' => $a->attendee->last_name],
-        ];
 
-        $user = entity_create('user', $user_data);
-        $user->save();
-
-        _user_mail_notify('register_admin_created',$user);
-
-        if ($a->attendee->amount_paid == $this->personalSponsorshipPrice) {
-          $this->createUserProfile($user, TRUE);
-        }
-        else {
-          $this->createUserProfile($user);
-        }
-
-
-      } catch (\Exception $e) {
-        \Drupal::logger('eventbrite cron')
-          ->log(RfcLogLevel::ERROR, 'User {mail} hasn\'t been created.', ['mail' => $a->attendee->email]);
-      }
     }
 
 
