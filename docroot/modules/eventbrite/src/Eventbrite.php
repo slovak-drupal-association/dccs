@@ -1,5 +1,5 @@
 <?php
-namespace Drupal\dccs_hacks;
+namespace Drupal\eventbrite;
 
 class Eventbrite {
   /**

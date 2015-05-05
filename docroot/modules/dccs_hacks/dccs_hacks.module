@@ -41,7 +41,7 @@ function dccs_hacks_set_uuid($uuid) {
 /**
  * Implements hook_cron().
  */
-function dccs_hacks_cron() {
-  $eventbrite = new EventbriteCron();
-  $eventbrite->run();
-}
+//function dccs_hacks_cron() {
+//  $eventbrite = new EventbriteCron();
+//  $eventbrite->run();
+//}
