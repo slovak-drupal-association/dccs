@@ -29,11 +29,12 @@ class EventninjaSync extends QueueWorkerBase {
     if(is_array($data)) {
       $name = explode(' ',$data[0]);
       $email = $data[1];
+      $username = explode('@',$email);
       try {
         // build array of user data
         $user_data = [
           'mail' => $email,
-          'name' => $email,
+          'name' => $username[0],
           'status' => 1,
           'field_first_name' => ['value' => $name[0]],
           'field_last_name' => ['value' => $name[1]],
