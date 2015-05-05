@@ -58,10 +58,8 @@ class AdminForm extends FormBase {
     $queue = \Drupal::queue('eventninja'); // Load queue
 
     while (!$read_file->eof()) {
-      dsm($lines);
       $data = $read_file->fgetcsv(';');
       if($lines > 1) { // skip headers
-        dsm($data);
         $user = user_load_by_mail($data[1]);
         if($user === false) { // Verify if user with specified email does not exist.
           $queue->createItem($data);
