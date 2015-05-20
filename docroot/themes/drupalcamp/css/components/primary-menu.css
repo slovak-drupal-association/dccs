@@ -109,7 +109,7 @@ body:not(:target) .region-primary-menu .menu-toggle-target-show:target ~ .menu .
 /**
  * Media queries for primary menu.
  */
-@media all and (min-width: 461px) and (max-width: 900px) {
+@media all and (min-width: 641px) and (max-width: 900px) {
   .region-primary-menu .menu {
     margin: 0 5px;
     padding: 0;

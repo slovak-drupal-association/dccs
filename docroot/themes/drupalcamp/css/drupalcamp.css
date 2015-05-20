@@ -19,6 +19,10 @@ a {
   //max-width: 80%;
 }
 
+.field-node--body {
+    text-align: justify;
+}
+
 #page h1 {
   font-size: 18px;
   border: 0px;
@@ -152,6 +156,8 @@ a:active {
   color: #FFF;
 }
 
+
+
 /* Button */
 
 a.buttons {
@@ -271,26 +277,6 @@ input[type="submit"]:hover,
 
 /* Titles */
 
-#site-footer__bottom .block {
-  text-align: center;
-}
-
-#site-footer__bottom h2 {
-  font-size: 18px;
-  border: 0px;
-  text-transform: none;
-  display: inline-block;
-}
-#site-footer__bottom h2::after {
-  content: " ";
-  width: 100%;
-  display: block;
-  background-color: #efb257;
-  height: 3px;
-  position: relative;
-  bottom: 6px;
-}
-
 #site-footer__wrapper h2 {
   font-size: 18px;
   border: 0px;
@@ -329,6 +315,29 @@ input[type="submit"]:hover,
   position: relative;
   bottom: 6px;
 }
+
+#upper-footer .layout-container {
+  display: table;
+  height: 100%;
+  padding-bottom: 0;
+  padding-top: 0;
+}
+
+#upper-footer .layout-container > .region {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+#upper-footer .layout-container div,
+#upper-footer .layout-container article {
+  margin: 0;
+  padding: 0;
+}
+
+#upper-footer .layout-container .node__links {
+  margin-top: 1em;
+}
+
 
 .featured-top .block {
   text-align: center;
@@ -573,12 +582,17 @@ input[type="submit"]:hover,
   font-size: 16px;
 }
 
+.region-primary-menu ul {
+    display: inline-block;
+}
+
 .region-primary-menu .menu-item a.active,
 .region-primary-menu .menu-item .menu-item--active-trail a {
   background: none;
   color: #FFF;
   text-transform: uppercase;
 }
+
 ul.menu a.active {
   color: #FFF;
 }
@@ -695,21 +709,6 @@ ul.menu a.active {
   padding: 0px 0px 0px 0px;
 }
 
-/* Footer bottom */
-
-#site-footer__bottom .view-content {
-  display: inline-block;
-}
-
-#site-footer__bottom .views-row {
-  float: left;
-  margin: 40px 30px 0px 30px;
-}
-
-#site-footer__bottom .region {
-  margin-top: 0px;
-}
-
 /** Speakers subpage **/
 
 .view-id-speakers_view img {
@@ -794,23 +793,6 @@ ul.menu a.active {
 }
 
 .path-attendees .main-content .section {
-  text-align: center;
-}
-
-/** Subpage sponsors **/
-
-.view-id-partners .views-row {
-  float: left;
-  margin-right: 30px;
-  margin-bottom: 30px;
-  margin-top: 15px;
-}
-
-.view-id-partners h3 {
-  clear: both;
-}
-
-.path-partners .main-content .section {
   text-align: center;
 }
 
@@ -1011,6 +993,8 @@ ul.menu a.active {
 
 /**** END FORM BLOCK ****/
 
+
+
 /* Media Queries */
 
 @media all and (max-width: 1032px) {
@@ -1020,11 +1004,11 @@ ul.menu a.active {
   .region-footer-fourth {
     width: 50%;
   }
-  
+
   .deco-group {
     display: none;
   }
-  
+
   #logo {
     float: none;
     margin-left: auto;
@@ -1032,7 +1016,7 @@ ul.menu a.active {
     width: 185px;
     display: block;
   }
-  
+
   .region-primary-menu {
     margin-top: 40px;
     float: none;
@@ -1040,9 +1024,9 @@ ul.menu a.active {
     text-align: center;
     font-size: 14.5px;
   }
-  .region-primary-menu .menu {
+/*  .region-primary-menu .menu {
     display: inline-block;
-  }
+  }*/
 }
 
 @media (max-width: 900px) and (min-width: 461px) {
@@ -1059,6 +1043,34 @@ ul.menu a.active {
   .region-footer-first, .region-footer-second, .region-footer-third, .region-footer-fourth {
     width: 50%;
   }
+}
+
+@media all and (max-width: 640px) {
+    ul.menu {
+        display: none;
+    }
+
+    ul.menu.open {
+        display: block;
+    }
+
+    .region-primary-menu .menu {
+        text-align: center;
+    }
+
+    .region-primary-menu .menu-item, body:not(:target) .region-primary-menu .menu-item {
+        float: left;
+        display: inline-block;
+        width: 100%;
+        height: auto;
+        overflow: visible;
+    }
+    .region-primary-menu .menu-item a:after {
+        display: none;
+    }
+    .region-primary-menu .menu-item a:hover:after {
+        display: none;
+    }
 }
 
 @media all and (max-width: 850px) {
@@ -1079,34 +1091,13 @@ ul.menu a.active {
   .region-footer-third {
     clear: both;
   }
-  
-  .region-primary-menu .menu-item, body:not(:target) .region-primary-menu .menu-item {
-    float: left;
-    display: inline-block;
-    width: 100%;
-    height: auto;
-    overflow: visible;
-  }
-  .region-primary-menu .menu-item a:after {
-    display: none;
-  }
-  .region-primary-menu .menu-item a:hover:after {
-    display: none;
-  }
-  
-  ul.clearfix.menu {
-    display: none;
-  }
-  ul.clearfix.menu.open {
-    display: block;
-  }
-  
+
   .block-views:nth-child(odd) {
     width: 100%;
     padding-left: 0%;
     padding-right: 0%;
   }
-  
+
   .block-views:nth-child(even) {
     width: 100%;
     padding-left: 0%;
@@ -1118,7 +1109,7 @@ ul.menu a.active {
     padding-left: 0%;
     padding-right: 0%;
   }
-  
+
   .views-row:nth-child(even) {
     width: 100%;
     padding-left: 0%;
@@ -1130,30 +1121,30 @@ ul.menu a.active {
     padding-left: 0%;
     padding-right: 0%;
   }
-  
+
   .view-id-attendees .views-row:nth-child(even) {
     width: 100%;
     padding-left: 0%;
     padding-right: 0%;
   }
-  
+
   .path-individual-sponsors .view-individual-sponsors .views-row:nth-child(odd) {
     width: 100%;
     padding-left: 0%;
     padding-right: 0%;
   }
-  
+
   .path-individual-sponsors .view-individual-sponsors .views-row:nth-child(even) {
     width: 100%;
     padding-left: 0%;
     padding-right: 0%;
   }
-  
+
   .highlighted-top h2 {
     display: inline-block;
     float: none;
   }
-  
+
   .highlighted-top .block-views:nth-child(odd) {
     float: left;
     width: 100%;
@@ -1161,7 +1152,7 @@ ul.menu a.active {
     padding-right: 0%;
     text-align: center;
   }
-  
+
   .highlighted-top .block-views:nth-child(even) {
     float: left;
     width: 100%;
@@ -1169,46 +1160,27 @@ ul.menu a.active {
     padding-right: 0%;
     text-align: center;
   }
-  
+
   .field-user--field-last-name {
     display: inline;
   }
-  
+
   .path-frontpage .view-id-speakers .more-link {
     margin-bottom: 60px;
   }
-  
-  .view-id-speakers .field-user--field-last-name, 
+
+  .view-id-speakers .field-user--field-last-name,
   .view-individual-sponsors .field-user--field-last-name {
     text-align: left;
   }
-  
+
   .view-id-speakers .field-user--field-about-me {
     text-align: left;
   }
-  
-  .view-id-speakers .field-user--field-last-name, 
+
+  .view-id-speakers .field-user--field-last-name,
   .view-individual-sponsors .field-user--field-last-name {
     display: block;
   }
 
-}
-
-@media all and (max-width: 559px) {
-  .region-primary-menu .menu {
-    text-align: center;
-  }
-  
-  #site-footer__bottom .views-row img {
-    width: 50%;
-    height: auto;
-  }
-  
-  #site-footer__bottom .views-row {
-    float: left;
-  }
-  
-  #site-footer__bottom .views-row {
-    margin: 40px 0px 0px 0px;
-  }
 }

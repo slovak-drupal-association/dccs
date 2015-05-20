@@ -1,0 +1,48 @@
+.path-user #page h1.title {
+    display: none;
+}
+
+.path-user .field-user--user-picture,
+.node--type-session .field-user--user-picture {
+    /*float: left;*/
+    /*margin: 0 1.5em 1em 0;*/
+    width: 200px;
+    display: block;
+    margin: auto;
+}
+
+.path-user .field-user--field-about-me {
+    clear: both;
+    text-align: justify;
+}
+
+.path-user .field-user--field-first-name,
+.path-user .field-user--field-last-name,
+.path-user .field-user--field-first-name div,
+.path-user .field-user--field-last-name div,
+.node--type-session  .field-user--field-first-name,
+.node--type-session  .field-user--field-last-name,
+.node--type-session  .field-user--field-first-name div,
+.node--type-session  .field-user--field-last-name div {
+    font-size: 1.25em;
+    display: inline;
+}
+
+.path-user .field-user--field-about-me > .field-label,
+.node--type-session  .field-user--field-about-me > .field-label {
+    margin-bottom: 0.5em;
+}
+
+@media all and (min-width: 640px) {
+    .path-user .field-user--field-about-me,
+    .node--type-session  .field-user--field-about-me {
+        margin-left: 220px;
+        clear: none;
+    }
+
+    .node--type-session .field-user--user-picture,
+    .path-user .field-user--user-picture {
+        float: left;
+        margin: 0 1.5em 1em 0;
+    }
+}

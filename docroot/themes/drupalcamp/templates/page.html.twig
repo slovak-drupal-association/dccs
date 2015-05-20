@@ -73,161 +73,165 @@
  */
 #}
 <div id="page-wrapper">
-  <div id="page">
-    <header id="header" class="header" role="banner" aria-label="{{ 'Site header'|t}}">
-      {# decoration start #}
-      <div class="deco-group deco-group-1">
-          <div class="deco"></div>
-          <div class="deco"></div>
-          <div class="deco"></div>
-      </div>
-      <div class="deco-group deco-group-2">
-          <div class="deco"></div>
-          <div class="deco"></div>
-          <div class="deco"></div>
-      </div>
-      {# decoration end #}
-      <div class="section layout-container clearfix">
-        {% if logo %}
-          <a href="{{ front_page }}" title="{{ 'Home'|t }}" rel="home" id="logo">
-            DRUPALCAMP<span class="highlighted">CS</span>
-          </a>
+    <div id="page">
+        <header id="header" class="header" role="banner" aria-label="{{ 'Site header'|t }}">
+            {# decoration start #}
+            <div class="deco-group deco-group-1">
+                <div class="deco"></div>
+                <div class="deco"></div>
+                <div class="deco"></div>
+            </div>
+            <div class="deco-group deco-group-2">
+                <div class="deco"></div>
+                <div class="deco"></div>
+                <div class="deco"></div>
+            </div>
+            {# decoration end #}
+            <div class="section layout-container clearfix">
+                {% if logo %}
+                    <a href="{{ front_page }}" title="{{ 'Home'|t }}" rel="home" id="logo">
+                        DRUPALCAMP<span class="highlighted">CS</span>
+                    </a>
+                {% endif %}
+                {{ page.primary_menu }}
+                {{ page.secondary_menu }}
+                {{ page.header }}
+                {% if site_name or site_slogan %}
+                    <div id="name-and-slogan"{% if hide_site_name and hide_site_slogan %} class="visually-hidden"{% endif %}>
+                        {% if site_name %}
+                            {% if title %}
+                                <div id="site-name"{% if hide_site_name %} class="visually-hidden"{% endif %}>
+                                    <strong>
+                                        <a href="{{ front_page }}" title="{{ 'Home'|t }}"
+                                           rel="home"><span>{{ site_name }}</span></a>
+                                    </strong>
+                                </div>
+                                {# Use h1 when the content title is empty #}
+                            {% else %}
+                                <h1 id="site-name"{% if hide_site_name %} class="visually-hidden" {% endif %}>
+                                    <a href="{{ front_page }}" title="{{ 'Home'|t }}"
+                                       rel="home"><span>{{ site_name }}</span></a>
+                                </h1>
+                            {% endif %}
+                        {% endif %}
+                        {% if site_slogan %}
+                            <div id="site-slogan"{% if hide_site_slogan %} class="visually-hidden"{% endif %}>
+                                {{ site_slogan }}
+                            </div>
+                        {% endif %}
+                    </div>
+                {% endif %}
+            </div>
+        </header>
+        {{ page.messages }}
+        {% if page.featured_top %}
+            <div class="featured-top">
+                <aside class="featured-top__inner section layout-container clearfix" role="complementary">
+                    {{ page.featured_top }}
+                </aside>
+            </div>
         {% endif %}
-	{{ page.primary_menu }}
-        {{ page.secondary_menu }}
-	{{ page.header }}
-        {% if site_name or site_slogan %}
-          <div id="name-and-slogan"{% if hide_site_name and hide_site_slogan %} class="visually-hidden"{% endif %}>
-            {% if site_name %}
-              {% if title %}
-                <div id="site-name"{% if hide_site_name %} class="visually-hidden"{% endif %}>
-                  <strong>
-                    <a href="{{ front_page }}" title="{{ 'Home'|t }}" rel="home"><span>{{ site_name }}</span></a>
-                  </strong>
+        {% if page.highlighted_top %}
+            <div class="highlighted-top">
+                {# decoration start #}
+                <div class="deco-group deco-group-2">
+                    <div class="deco"></div>
+                    <div class="deco"></div>
+                    <div class="deco"></div>
                 </div>
-              {# Use h1 when the content title is empty #}
-              {% else %}
-                <h1 id="site-name"{% if hide_site_name %} class="visually-hidden" {% endif %}>
-                  <a href="{{ front_page }}" title="{{ 'Home'|t }}" rel="home"><span>{{ site_name }}</span></a>
-                </h1>
-              {% endif %}
-            {% endif %}
-            {% if site_slogan %}
-              <div id="site-slogan"{% if hide_site_slogan %} class="visually-hidden"{% endif %}>
-                {{ site_slogan }}
-              </div>
-            {% endif %}
-          </div>
+                {# decoration end #}
+                <aside class="highlighted-top__inner section layout-container clearfix" role="complementary">
+                    {{ page.highlighted_top }}
+                </aside>
+            </div>
         {% endif %}
-      </div>
-    </header>
-    {{ page.messages }}
-    {% if page.featured_top %}
-      <div class="featured-top">
-        <aside class="featured-top__inner section layout-container clearfix" role="complementary">
-          {{ page.featured_top }}
-        </aside>
-      </div>
-    {% endif %}
-    {% if page.highlighted_top %}
-      <div class="highlighted-top">
-	{# decoration start #}
-	  <div class="deco-group deco-group-2">
-	      <div class="deco"></div>
-	      <div class="deco"></div>
-	      <div class="deco"></div>
-	  </div>
-	{# decoration end #}
-        <aside class="highlighted-top__inner section layout-container clearfix" role="complementary">
-          {{ page.highlighted_top }}
-        </aside>
-      </div>
-    {% endif %}
-    <div id="main-wrapper" class="layout-main-wrapper layout-container clearfix">
-      <div id="main" class="layout-main clearfix">
         {{ page.breadcrumb }}
-        <main id="content" class="column main-content" role="main">
-          <section class="section">
-            <a id="main-content" tabindex="-1"></a>
-            {{ title_prefix }}
-            {% if title %}
-              <h1 class="title" id="page-title">
-                {{ title }}
-              </h1>
-            {% endif %}
-            {{ title_suffix }}
-            {% if tabs %}
-              <nav class="tabs" role="navigation" aria-label="{{ 'Tabs'|t }}">
-                {{ tabs }}
-              </nav>
-            {% endif %}
-            {{ page.help }}
-            {% if action_links %}
-              <ul class="action-links">{{ action_links }}</ul>
-            {% endif %}
-            {{ page.content }}
-          </section>
-        </main>
-        {% if page.sidebar_first %}
-          <div id="sidebar-first" class="column sidebar">
-            <aside class="section" role="complementary">
-              {{ page.sidebar_first }}
-            </aside>
-          </div>
-        {% endif %}
-        {% if page.sidebar_second %}
-          <div id="sidebar-second" class="column sidebar">
-            <aside class="section" role="complementary">
-              {{ page.sidebar_second }}
-            </aside>
-          </div>
-        {% endif %}
-      </div>
-    </div>
-    {% if page.featured_bottom_first or page.featured_bottom_second or page.featured_bottom_third %}
-      <div id="featured-bottom-wrapper">
-        <aside id="featured-bottom" class="section layout-container clearfix" role="complementary"> 
-          {{ page.featured_bottom_first }}
-          {{ page.featured_bottom_second }}
-          {{ page.featured_bottom_third }}
-        </aside>
-      </div>
-    {% endif %}
-    {% if page.upper_footer %}
-      <div id="upper-footer">
-	<aside id="upper-footer-inner" class="section layout-container clearfix" role="complementary">
-	  {{ page.upper_footer }}
-	</aside>
-      </div>
-    {% endif %}
-    {% if page.footer_first or page.footer_second or page.footer_third or page.footer_fourth %}
-    <div id="site-footer__wrapper">
-      {# decoration start #}
-	  <div class="deco-group deco-group-1">
-	      <div class="deco"></div>
-	      <div class="deco"></div>
-	      <div class="deco"></div>
-	  </div>
-      {# decoration end #}   
-      <footer class="site-footer section layout-container">
-        {% if page.footer_first or page.footer_second or page.footer_third or page.footer_fourth %}
-          <div id="footer-columns" class="clearfix">
-            {{ page.footer_first }}
-            {{ page.footer_second }}
-          {#  {{ page.footer_third }}
-            {{ page.footer_fourth }}
-	  #}
-          </div>
-        {% endif %}
-	{% endif %}
-      </footer>
-    </div>
-      {% if page.footer_fifth %}
-        <div id="site-footer__bottom" role="contentinfo">
-	  <aside class="section layout-container clearfix" role="complementary">
-	    {{ page.footer_fifth }}
-	  </aside>
+        <div id="main-wrapper" class="layout-main-wrapper layout-container clearfix">
+            <div id="main" class="layout-main clearfix">
+                <main id="content" class="column main-content" role="main">
+                    <section class="section">
+                        <a id="main-content" tabindex="-1"></a>
+                        {{ title_prefix }}
+                        {% if title %}
+                            <div class="title-wrapper">
+                                <h1 class="title" id="page-title">
+                                    {{ title }}
+                                </h1>
+                            </div>
+                        {% endif %}
+                        {{ title_suffix }}
+                        {% if tabs %}
+                            <nav class="tabs" role="navigation" aria-label="{{ 'Tabs'|t }}">
+                                {{ tabs }}
+                            </nav>
+                        {% endif %}
+                        {{ page.help }}
+                        {% if action_links %}
+                            <ul class="action-links">{{ action_links }}</ul>
+                        {% endif %}
+                        {{ page.content }}
+                    </section>
+                </main>
+                {% if page.sidebar_first %}
+                    <div id="sidebar-first" class="column sidebar">
+                        <aside class="section" role="complementary">
+                            {{ page.sidebar_first }}
+                        </aside>
+                    </div>
+                {% endif %}
+                {% if page.sidebar_second %}
+                    <div id="sidebar-second" class="column sidebar">
+                        <aside class="section" role="complementary">
+                            {{ page.sidebar_second }}
+                        </aside>
+                    </div>
+                {% endif %}
+            </div>
         </div>
-      {% endif %}
-  </div>
+        {% if page.featured_bottom_first or page.featured_bottom_second or page.featured_bottom_third %}
+            <div id="featured-bottom-wrapper">
+                <aside id="featured-bottom" class="section layout-container clearfix" role="complementary">
+                    {{ page.featured_bottom_first }}
+                    {{ page.featured_bottom_second }}
+                    {{ page.featured_bottom_third }}
+                </aside>
+            </div>
+        {% endif %}
+        {% if page.upper_footer %}
+            <div id="upper-footer">
+                <aside id="upper-footer-inner" class="section layout-container clearfix" role="complementary">
+                    {{ page.upper_footer }}
+                </aside>
+            </div>
+        {% endif %}
+        {% if page.footer_first or page.footer_second or page.footer_third or page.footer_fourth %}
+        <div id="site-footer__wrapper">
+            {# decoration start #}
+            <div class="deco-group deco-group-1">
+                <div class="deco"></div>
+                <div class="deco"></div>
+                <div class="deco"></div>
+            </div>
+            {# decoration end #}
+            <footer class="site-footer section layout-container">
+                {% if page.footer_first or page.footer_second or page.footer_third or page.footer_fourth %}
+                    <div id="footer-columns" class="clearfix">
+                        {{ page.footer_first }}
+                        {{ page.footer_second }}
+                        {#  {{ page.footer_third }}
+                          {{ page.footer_fourth }}
+                    #}
+                    </div>
+                {% endif %}
+                {% endif %}
+            </footer>
+        </div>
+        {% if page.footer_fifth %}
+            <div id="site-footer__bottom" role="contentinfo">
+                <aside class="section layout-container clearfix" role="complementary">
+                    {{ page.footer_fifth }}
+                </aside>
+            </div>
+        {% endif %}
+    </div>
 </div>

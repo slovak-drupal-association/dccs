@@ -13,7 +13,7 @@ h1#page-title {
 }
 @media all and (min-width: 851px) {
   .main-content {
-    float: left; /* LTR */
+    /*float: left;*/
     position: relative;
   }
   [dir="rtl"] .main-content {
