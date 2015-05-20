@@ -1,0 +1,188 @@
+/** Program view on subpage **/
+.path-sessions .title-wrapper {
+    text-align: center;
+}
+
+.path-sessions h3 {
+    display: none;
+}
+
+.path-sessions .view-content time {
+    color: #414141;
+    font-size: 13px;
+}
+
+.path-sessions .view-content a {
+    color: #414141;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.path-sessions .view-content .views-field-field-referenced-user {
+    color: #414141;
+    font-size: 16px;
+    font-style: italic;
+}
+
+.path-sessions .view-content .field-name-field-first-name,
+.path-sessions .view-content .field-name-field-last-name {
+    display: inline-block;
+}
+
+.path-sessions .view-grouping-content .views-row {
+    min-height: 70px;
+    background: url("../../images/program-border.png") no-repeat;
+    margin-top: 7px;
+    padding-left: 29px;
+}
+
+.path-sessions .view-grouping-content .views-row:last-child {
+    background: url("../../images/program-border-last.png") no-repeat;
+}
+
+.path-sessions .view-grouping .view-grouping {
+    width: 50%;
+    float: left;
+}
+
+.view-sessions {
+    margin-left: 20%;
+}
+
+@media all and (max-width: 720px) {
+    .view-sessions {
+        margin: 0;
+    }
+
+    .path-sessions .view-grouping .view-grouping {
+        width: 100%;
+        float: none;
+    }
+
+    .path-sessions .view-content a {
+        font-size: 15px;
+    }
+
+    .path-sessions .view-content .views-field-field-referenced-user {
+        font-size: 13px;
+    }
+}
+
+/** Program menu **/
+.path-sessions #main-wrapper {
+    padding-top: 0px;
+}
+
+.path-sessions #main {
+    margin-top: 0px;
+}
+
+#block-sessionsmenu ul {
+    text-align: center;
+}
+
+#block-sessionsmenu ul li {
+    margin-top: 0;
+    padding-top: 0;
+    text-align: center;
+    line-height: 30px;
+}
+
+#block-sessionsmenu ul li.menu-item--active-trail{
+    background: #efb257;
+}
+
+#block-sessionsmenu ul li a {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 300;
+}
+
+#block-sessionsmenu ul li:not(.menu-item--active-trail) a {
+    color: #414141;
+}
+
+#block-sessionsmenu ul li a:hover {
+    border-bottom: none;
+}
+
+.path-sessions .region-breadcrumb {
+    background: #f7f7f7;
+}
+
+.path-sessions #block-sessionsmenu ul {
+    padding: 0;
+    border-bottom: 1px solid #d5d5d5;
+}
+
+#block-sessionsmenu ul.menu {
+    display: block;
+}
+
+@media all and (min-width: 720px) {
+    #block-sessionsmenu ul li{
+        height: 50px;
+        min-width: 32%;
+        display: inline-block;
+        line-height: normal;
+    }
+
+    #block-sessionsmenu ul li a {
+        font-size: 20px;
+        line-height: 30px;
+        margin-top: 10px;
+        display: inline-block;
+        text-decoration: none;
+        font-weight: 300;
+    }
+
+    #block-sessionsmenu ul li:not(.menu-item--active-trail) a:hover {
+        border-color: #efb257;
+    }
+
+    #block-sessionsmenu ul li.menu-item--active-trail a:hover {
+        border-bottom: none;
+    }
+
+    .path-sessions #block-sessionsmenu ul li:not(.menu-item--active-trail):not(:first-child) {
+        border-right: 1px solid #d5d5d5;
+    }
+    .path-sessions #block-sessionsmenu ul li:first-child:not(.menu-item--active-trail) {
+        border-left: 1px solid #d5d5d5;
+    }
+}
+
+@media all and (min-width: 981px) {
+    #block-sessionsmenu ul li{
+        height: 94px;
+        min-width: 254px;
+    }
+
+    #block-sessionsmenu ul li a {
+        font-size: 38px;
+        line-height: 50px;
+        margin-top: 22px;
+        display: inline-block;
+        text-decoration: none;
+        font-weight: 300;
+    }
+}
+
+
+/** Session subpage **/
+.field-node--field-room,
+.field-node--field-level {
+    margin: 0;
+}
+
+.field-node--field-room .field-label,
+.field-node--field-level .field-label {
+    font-size: 1.071em;
+    font-weight: bold;
+}
+
+.field-node--field-room ul.links.field-items,
+.field-node--field-level ul.links.field-items {
+    font-size: 1.071em;
+    color: #414141;
+}

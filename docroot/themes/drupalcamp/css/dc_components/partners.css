@@ -1,0 +1,113 @@
+/** Homepage sponsors blocks **/
+#site-footer__bottom .view-content {
+    display: inline-block;
+}
+
+#site-footer__bottom .views-row {
+    margin-bottom: 30px;
+    margin-top: 15px;
+}
+
+@media all and (min-width: 480px) {
+    #site-footer__bottom .views-row {
+        float: left;
+        height: 50px;
+        width: 50%;
+    }
+}
+
+@media all and (min-width: 720px) {
+    #site-footer__bottom .views-row {
+        width: 33%;
+    }
+}
+
+@media all and (min-width: 900px) {
+    #site-footer__bottom .views-row {
+        width: auto;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+/** Subpage sponsors **/
+
+.node--type-partner #page h1 {
+    display: none;
+}
+
+.node--type-partner .node .field-type-image {
+    float: none;
+    margin: 1.5em 0;
+}
+
+.node--type-partner .field-node--field-image {
+    text-align: center;
+}
+
+.path-partners .main-content .section {
+    text-align: center;
+}
+
+.path-partners h3 {
+    clear: both;
+    display: block;
+    font-size: 20px;
+}
+
+.path-partners .view-content {
+    text-align: center;
+}
+
+.path-partners .view-grouping-content {
+    display: inline-block;
+}
+
+.path-partners .view-grouping-header {
+    display: none;
+}
+
+@media all and (min-width: 640px) {
+    .path-partners .views-row {
+        float: left;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .path-partners .views-row:nth-child(2n) {
+        clear: both;
+    }
+}
+
+@media all and (min-width: 900px) {
+    .path-partners .views-row:nth-child(2n) {
+        clear: none;
+    }
+
+    .path-partners .views-row {
+        width: auto;
+    }
+}
+
+/* Titles */
+
+#site-footer__bottom .block {
+    text-align: center;
+}
+
+#site-footer__bottom h2 {
+    font-size: 18px;
+    border: 0px;
+    text-transform: none;
+    display: inline-block;
+}
+
+#site-footer__bottom h2::after {
+    content: " ";
+    width: 100%;
+    display: block;
+    background-color: #efb257;
+    height: 3px;
+    position: relative;
+    bottom: 6px;
+}

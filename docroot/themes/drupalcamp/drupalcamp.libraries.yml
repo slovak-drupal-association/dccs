@@ -1,4 +1,5 @@
 global-styling:
+  version: 8.0.1
   css:
     theme:
       css/base/elements.css: {}
@@ -43,5 +44,14 @@ global-styling:
       css/components/buttons.css: {}
       css/components/ui-dialog.css: {}
       css/drupalcamp.css: {}
+      css/dc_components/partners.css: {}
+      css/dc_components/program.css: {}
+      css/dc_components/user.css: {}
   js:
     js/drupalcamp.js: {}
+  dependencies:
+      - core/jquery
+      - core/drupal.ajax
+      - core/drupal
+      - core/drupalSettings
+      - core/jquery.once
