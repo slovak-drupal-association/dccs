@@ -1,4 +1,8 @@
 /** Homepage sponsors blocks **/
+#block-views-block-partners-block-3 .views-row {
+    height: auto;
+}
+
 #site-footer__bottom .view-content {
     display: inline-block;
 }
