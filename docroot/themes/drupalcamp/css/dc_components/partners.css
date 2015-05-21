@@ -120,6 +120,7 @@
 .program-link {
     display: inline-block;
     padding: 20px;
+    width: 100%;
 }
 
 .program-link a {
@@ -128,6 +129,6 @@
 
 @media all and (min-width: 640px){
     .program-link {
-        width: 33%;
+        width: 25%;
     }
 }
