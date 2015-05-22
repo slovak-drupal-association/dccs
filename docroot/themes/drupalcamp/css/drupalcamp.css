@@ -140,17 +140,17 @@ a:active {
   border-bottom-style: none;
 }
 
-.grid-50:first-child {
-  float: left;
-  width: 48%;
-  padding-right: 2%;
-}
+/*.grid-50:first-child {*/
+  /*float: left;*/
+  /*width: 48%;*/
+  /*padding-right: 2%;*/
+/*}*/
 
-.grid-50:last-child {
-  float: left;
-  width: 48%;
-  padding-left: 2%;
-}
+/*.grid-50:last-child {*/
+  /*float: left;*/
+  /*width: 48%;*/
+  /*padding-left: 2%;*/
+/*}*/
 
 #upper-footer .node--view-mode-teaser h2 a {
   color: #FFF;
