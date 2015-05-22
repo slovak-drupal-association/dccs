@@ -44,6 +44,7 @@ global-styling:
       css/components/buttons.css: {}
       css/components/ui-dialog.css: {}
       css/drupalcamp.css: {}
+      css/unsemantic-grid-responsive.css: {}
       css/dc_components/partners.css: {}
       css/dc_components/program.css: {}
       css/dc_components/user.css: {}
