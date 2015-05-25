@@ -10,6 +10,11 @@ a {
   border-bottom: none;
 }
 
+p {
+    line-height: 21px;
+    margin-bottom: 14px;
+}
+
 .layout-container {
   max-width: 1080px;
   padding-left: 40px;
@@ -519,9 +524,9 @@ input[type="submit"]:hover,
   margin-bottom: 40px;
 }
 
-.view-id-speakers .views-row {
-  height: 169px;
-}
+/*.view-id-speakers .views-row {*/
+  /*height: 169px;*/
+/*}*/
 
 .view-individual-sponsors .views-row {
   margin-bottom: 10px;
@@ -719,7 +724,7 @@ ul.menu a.active {
 }
 
 .view-id-speakers_view .views-row {
-  height: 190px;
+  /*height: 190px;*/
   overflow: hidden;
   margin-bottom: 40px;
   float: left;
