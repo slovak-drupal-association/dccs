@@ -172,6 +172,11 @@
                         {{ page.content }}
                     </section>
                 </main>
+                {% if page.undercontent %}
+                    <section class="section-undercontent">
+                        {{ page.undercontent }}
+                    </section>
+                {% endif %}
                 {% if page.sidebar_first %}
                     <div id="sidebar-first" class="column sidebar">
                         <aside class="section" role="complementary">

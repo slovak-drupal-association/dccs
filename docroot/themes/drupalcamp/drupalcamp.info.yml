@@ -24,6 +24,7 @@ regions:
   highlighted_top: 'Highlighted top'
   breadcrumb: Breadcrumb
   content: Content
+  undercontent: 'Under content'
   sidebar_first: 'Sidebar first'
   sidebar_second: 'Sidebar second'
   featured_bottom_first: 'Featured bottom first'
