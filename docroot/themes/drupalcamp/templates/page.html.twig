@@ -172,11 +172,6 @@
                         {{ page.content }}
                     </section>
                 </main>
-                {% if page.undercontent %}
-                    <section class="section-undercontent">
-                        {{ page.undercontent }}
-                    </section>
-                {% endif %}
                 {% if page.sidebar_first %}
                     <div id="sidebar-first" class="column sidebar">
                         <aside class="section" role="complementary">
@@ -193,6 +188,11 @@
                 {% endif %}
             </div>
         </div>
+        {% if page.undercontent %}
+            <section class="section-undercontent">
+                {{ page.undercontent }}
+            </section>
+        {% endif %}
         {% if page.featured_bottom_first or page.featured_bottom_second or page.featured_bottom_third %}
             <div id="featured-bottom-wrapper">
                 <aside id="featured-bottom" class="section layout-container clearfix" role="complementary">
