@@ -189,9 +189,11 @@
             </div>
         </div>
         {% if page.undercontent %}
-            <section class="section-undercontent">
-                {{ page.undercontent }}
-            </section>
+            <div class="section-undercontent-wrapper">
+                <section id="section-undercontent" class="section layout-container clearfix">
+                    {{ page.undercontent }}
+                </section>
+            </div>
         {% endif %}
         {% if page.featured_bottom_first or page.featured_bottom_second or page.featured_bottom_third %}
             <div id="featured-bottom-wrapper">

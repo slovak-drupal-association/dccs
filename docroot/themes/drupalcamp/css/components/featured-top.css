@@ -23,3 +23,50 @@
   /*margin: 0;*/
   padding: 0;
 }
+
+.featured-top .block {
+    text-align: center;
+}
+
+.featured-top .block .content {
+    text-align: justify;
+    font-size: 14px;
+}
+.featured-top h2 {
+    font-size: 18px;
+    border: 0px;
+    text-transform: none;
+    display: inline-block;
+    margin-top: 30px;
+    margin-bottom: 25px;
+}
+.featured-top h2::after {
+    content: " ";
+    width: 100%;
+    display: block;
+    background-color: #e3e3e3;
+    height: 3px;
+    position: relative;
+    bottom: 2px;
+}
+.featured-top h2 span {
+    color: #efb257;
+}
+
+/* featured top */
+
+.featured-top {
+    text-align: initial;
+    font-size: initial;
+    font-weight: normal;
+    line-height: initial;
+    padding: 0 0 0 0;
+    border-bottom: 0px;
+    text-shadow: none;
+}
+
+.featured-top {
+    background: #FFF;
+    color: #414141;
+    min-height: 300px;
+}
