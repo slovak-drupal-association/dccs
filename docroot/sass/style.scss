@@ -3,7 +3,53 @@
 @import "compass/reset";
 @import "susy";
 
+@font-face {
+  font-family: "Montserrat";
+  src: url(../fonts/Montserrat-Hairline.otf);
+  font-weight: 100;
+}
 
+@font-face {
+  font-family: "Montserrat";
+  src: url(../fonts/Montserrat-UltraLight.otf);
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url(../fonts/Montserrat-Light.otf);
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url(../fonts/Montserrat-Regular.otf);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url(../fonts/Montserrat-SemiBold.otf);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url(../fonts/Montserrat-Bold.otf);
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url(../fonts/Montserrat-ExtraBold.otf);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url(../fonts/Montserrat-Black.otf);
+  font-weight: 800;
+}
 
 // Import our styles
 @import "variables";
