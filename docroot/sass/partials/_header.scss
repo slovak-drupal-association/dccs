@@ -33,6 +33,16 @@
   }
 }
 
+.language {
+  display: block;
+  font-size: small;
+
+  .active {
+    cursor: default;
+    text-decoration: none;
+  }
+}
+
 /**
  * Media queries
  */

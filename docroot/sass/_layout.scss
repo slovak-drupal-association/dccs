@@ -38,6 +38,11 @@ $desktop-breakpoint: 960px;
 .follow-us--inner,
 .made-by--inner {
   @include span(4);
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+  width: 100%;
 }
 
 /**

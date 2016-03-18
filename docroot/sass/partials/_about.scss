@@ -11,6 +11,7 @@
 }
 
 .about-title {
+  clear: both;
   text-align: center;
   h1 {
     border-bottom: 3px solid #e3e3e3;
@@ -26,10 +27,24 @@
   }
 }
 
+.stripe-section {
+  clear: both;
+  padding: 2em 0;
+  .background {
+    background: #a8ddf8;
+    margin: 1em 0;
+  }
+}
+
 .about-content {
+  @include clearfix;
   .left,
   .right {
     @include span(4);
+
+    h3 {
+      margin-top: 1.5em;
+    }
   }
 }
 
