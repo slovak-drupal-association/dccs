@@ -29,9 +29,10 @@ $desktop-breakpoint: 960px;
   z-index: 2;
 }
 
-.section {
+section {
   overflow: hidden;
   position: relative;
+  padding-bottom: 4em;
 }
 
 .header--inner,
@@ -60,4 +61,22 @@ $desktop-breakpoint: 960px;
   .made-by--inner {
     @include span(12);
   }
+}
+
+.background {
+  background: #a8ddf8;
+}
+
+.inner-form {
+  @include container(760px);
+  @include show-grid(12);
+}
+
+.partners-row {
+  text-align: center;
+}
+
+.partner {
+  display: inline-block;
+  padding: 10px;
 }

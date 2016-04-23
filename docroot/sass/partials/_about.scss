@@ -6,8 +6,6 @@
 .about {
   background: #fff;
   padding: 4em 0;
-  .about--inner {
-  }
 }
 
 .about-title {
@@ -16,10 +14,10 @@
   h1 {
     border-bottom: 3px solid #e3e3e3;
     display: inline-block;
-    font-size: 18px;
+    font-size: 32px;
     font-weight: 600;
     margin-bottom: 1em;
-    padding-bottom: 0.85em;
+    padding-bottom: 0.35em;
   }
   h2 {
     font-size: 32px;
@@ -27,37 +25,14 @@
   }
 }
 
-.stripe-section {
-  clear: both;
-  padding: 2em 0;
-  .background {
-    background: #a8ddf8;
-    margin: 1em 0;
+.left, .right {
+  @include span(2);
+  img {
+    width: 100%;
+    height: auto;
   }
 }
 
 .about-content {
-  @include clearfix;
-  .left,
-  .right {
-    @include span(4);
-
-    h3 {
-      margin-top: 1.5em;
-    }
-  }
-}
-
-/**
- * Media queries
- */
-
-/* Desktop */
-@include susy-breakpoint($desktop-breakpoint, $desktop-layout) {
-  .about-content {
-    .left,
-    .right {
-      @include span(6);
-    }
-  }
+  @include span(4);
 }

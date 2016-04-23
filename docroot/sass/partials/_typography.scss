@@ -11,10 +11,38 @@ body {
 }
 
 p {
-  line-height: 2em;
-  margin: 0 0 2em;
+  line-height: 1.7em;
+  margin: 0 0 1em;
 }
 
 strong {
   font-weight: 600;
+}
+
+.button-row {
+  text-align: center;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+ul {
+  list-style: disc;
+  padding: 0 0 20px 20px;
+}
+
+.gold {
+  color: $gold;
+  margin-top: 20px;
+}
+
+.silver {
+  color: $silver;
+  margin-top: 20px;
+}
+
+.bronze {
+  color: $bronze;
+  margin-top: 20px;
 }
