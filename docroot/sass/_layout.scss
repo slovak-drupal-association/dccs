@@ -2,6 +2,10 @@
   @include box-sizing(border-box);
 }
 
+body {
+  overflow-x: hidden;
+}
+
 $susy: (
   columns: 4,
   gutters: 1/4,
