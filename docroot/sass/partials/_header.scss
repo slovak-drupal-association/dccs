@@ -6,8 +6,9 @@
 .header {
   background: #4ab4e9;
   color: #fff;
+  position: relative;
+  overflow-x: hidden;
   .header--inner {
-    // background: rgba(128, 256, 128, 0.45);
     background: image-url('mt.png') no-repeat center bottom;
     min-height: 465px;
   }
