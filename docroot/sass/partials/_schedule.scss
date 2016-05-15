@@ -10,3 +10,10 @@ Schedule
     font-size: 18px ;
   }
 }
+
+.fa.speaker-social {
+  font-size: 50px;
+  &.fa-twitter:hover {
+    color: #55acee;
+  }
+}
