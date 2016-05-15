@@ -19,10 +19,6 @@ strong {
   font-weight: 600;
 }
 
-.button-row {
-  text-align: center;
-}
-
 h2 {
   font-size: 18px;
 }
@@ -30,6 +26,19 @@ h2 {
 ul {
   list-style: disc;
   padding: 0 0 20px 20px;
+}
+
+i {
+  font-style: italic;
+}
+
+.underline {
+  padding-bottom: 0.15em;
+  font-size: 22px;
+  font-weight: 600;
+  border-bottom: 3px solid $grey;
+  display: inline-block;
+  margin-bottom: 0.5em;
 }
 
 .gold {
@@ -45,4 +54,8 @@ ul {
 .bronze {
   color: $bronze;
   margin-top: 20px;
+}
+
+.button-row {
+  text-align: center;
 }
