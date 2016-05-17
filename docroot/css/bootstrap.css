@@ -14,13 +14,17 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
-.container {
+.container,
+.container-small {
   margin-right: auto;
   margin-left: auto;
 }
 @media (min-width: 960px) {
   .container {
     width: 1180px;
+  }
+  .container-small {
+    width: 960px;
   }
 }
 .container-fluid {
@@ -402,4 +406,7 @@
 }
 .affix {
   position: fixed;
+}
+.center{
+  text-align: center;
 }
