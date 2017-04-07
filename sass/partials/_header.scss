@@ -12,6 +12,9 @@
     background: image-url('mt.png') no-repeat center bottom;
     min-height: 465px;
   }
+  .header--inner--compact {
+    min-height: 285px;
+  }
 }
 
 .header-title {
