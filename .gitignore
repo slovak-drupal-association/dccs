@@ -1,9 +1,3 @@
-# Ignore configuration files that may contain sensitive information.
-
-# Ignore paths that contain user-generated content.
-sites/*/files
-sites/*/private
-/nbproject/private/
 
 # Ignore eclipse files
 .project
@@ -12,3 +6,4 @@ sites/*/private
 
 #compass css files
 .sass-cache
+_site
