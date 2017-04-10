@@ -72,7 +72,7 @@
             <div class="deco"></div>
         </div>
         <div class="inner">
-            <div class="header--inner">
+            <div class="header--inner{% unless page.event_info %} header--inner--compact{% endunless %}">
                 <div class="header-title">
                     <h1>DrupalCamp<span class="highlighted">CS</span></h1>
                     {% if page.event_info %}
