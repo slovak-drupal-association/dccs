@@ -4,15 +4,28 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>DrupalCamp CS - Drupal Camp Czech and Slovakia</title>
     <meta name="description"
-          content="DrupalCampCS je podujatie pre fanúšikov CMS Drupal a webových technológií.">
+          content="DrupalCampCS je událost fanoušků CMS Drupal a webových technologií.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta property="og:title" content="DrupalCampCS 2017 | DrupalCamp ČeskoSlovensko">
     <meta property="og:type" content="website">
     <meta property="og:url" content="http://drupalcs.camp">
     <meta property="og:description"
-          content="DrupalCampCS je podujatie pre fanúšikov CMS Drupal a webových technológií.">
+          content="DrupalCampCS je událost fanoušků CMS Drupal a webových technologií.">
+    <meta property="og:image" content="/images/dccs_social.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@drupalcampCS">
+    <meta name="twitter:creator" content="@drupal_sk">
+    {% if page.title %}
+        <meta name="twitter:title" content="{{ page.title }} | DrupalCamp ČeskoSlovensko">
+        <meta property="og:title" content="{{ page.title }} | DrupalCamp ČeskoSlovensko">
+        <title>{{ page.title }} | DrupalCamp ČeskoSlovensko</title>
+    {% else %}
+        <meta name="twitter:title" content="DrupalCampCS 2017 | DrupalCamp ČeskoSlovensko">
+        <meta property="og:title" content="DrupalCampCS 2017 | DrupalCamp ČeskoSlovensko">
+        <title>DrupalCampCS 2017 | DrupalCamp ČeskoSlovensko</title>
+    {% endif %}
+    <meta name="twitter:description" content="DrupalCampCS je událost fanoušků CMS Drupal a webových technologií.">
+    <meta name="twitter:image" content="/images/dccs_social.png">
 
     <link rel="shortcut icon" href="/favicon.jpg" type="image/jpeg">
 
