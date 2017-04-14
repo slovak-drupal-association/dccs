@@ -7,7 +7,7 @@
   background: #4ab4e9;
   color: #fff;
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
   .header--inner {
     background: image-url('mt.png') no-repeat center bottom;
     min-height: 465px;
@@ -21,6 +21,7 @@
   text-align: center;
   h1 {
     border-bottom: 3px solid #3e99c7;
+    color: #FFF;
     display: inline-block;
     font-size: 20px;
     font-weight: 600;
