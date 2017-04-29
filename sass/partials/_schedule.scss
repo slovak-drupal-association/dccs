@@ -7,7 +7,7 @@ Schedule
   margin-bottom: 0.75em;
 
   h3 {
-    font-size: 18px ;
+    font-size: 18px;
   }
 }
 
@@ -15,5 +15,15 @@ Schedule
   font-size: 50px;
   &.fa-twitter:hover {
     color: #55acee;
+  }
+}
+
+table.schedule {
+  width: 50%;
+  margin-left: 25%;
+  td {
+    padding-left: 10px;
+    padding-bottom: 10px;
+    vertical-align: top;
   }
 }
