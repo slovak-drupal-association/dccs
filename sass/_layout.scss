@@ -31,6 +31,7 @@ $desktop-breakpoint: 960px;
   @include container();
   position: relative;
   z-index: 2;
+  padding: 0 10px;
 }
 
 section {
